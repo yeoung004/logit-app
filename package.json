@@ -6,7 +6,10 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "clean-package": "rm -rf ./node_modules",
+    "clean-android": "rm -rf ./android/app/build ./android/.gradle && cd ./android && ./gradlew clean && cd ..",
+    "clean-ios": "rm -rf ./ios/build ./ios/Pods ~/.cocoapods && pod cache clean --all"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -28,18 +31,22 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-native": "0.81.5",
+    "react-native-edge-to-edge": "^1.7.0",
     "react-native-gesture-handler": "~2.28.0",
+    "react-native-nitro-modules": "^0.32.0",
     "react-native-reanimated": "~4.1.1",
     "react-native-safe-area-context": "~5.6.0",
     "react-native-screens": "~4.16.0",
     "react-native-svg": "15.12.1",
+    "react-native-unistyles": "^3.0.20",
     "react-native-worklets": "0.5.1"
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "expo-dev-client": "~6.0.20"
   },
   "private": true
 }
