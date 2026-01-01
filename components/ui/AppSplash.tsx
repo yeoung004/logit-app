@@ -17,7 +17,7 @@ export const AppSplash = React.memo(function AppSplash() {
   React.useEffect(() => {
     rotation.value = withRepeat(
       withSequence(
-        withTiming(-9, { duration: 2000 }),
+        withTiming(-6, { duration: 1000 }),
         withTiming(0, { duration: 400 }),
         withTiming(-3, { duration: 400 }),
         withTiming(0, { duration: 400 }),
@@ -40,24 +40,17 @@ export const AppSplash = React.memo(function AppSplash() {
   });
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F0F0F0",
-      }}
-    >
+    <View className="flex justify-center items-center w-full h-full">
       <Animated.View
         style={[
           {
             borderRadius: 15,
             backgroundColor: "#5288FF",
-            shadowColor: "#000",
-            shadowOffset: { width: 0, height: 2 },
-            shadowOpacity: 0.25,
-            shadowRadius: 3.84,
-            elevation: 5,
+            shadowColor: "#0050FF",
+            shadowOffset: { width: 0, height: 0 },
+            shadowOpacity: 0.5,
+            shadowRadius: 50,
+            elevation: 10,
           },
           animatedStyle,
         ]}
@@ -67,16 +60,9 @@ export const AppSplash = React.memo(function AppSplash() {
           source={require("@/assets/images/splash-icon.png")}
         />
       </Animated.View>
-      <View
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          paddingVertical: 30,
-          gap: 5,
-        }}
-      >
-        <Typography variant="h1_b">Logit</Typography>
-        <Typography color="#777777" variant="subtitle">
+      <View className="flex justify-center items-center py-7 gap-1">
+        <Typography variant="h2">Logit</Typography>
+        <Typography color="#777777" variant="body">
           Log the insight, do it now.
         </Typography>
       </View>
