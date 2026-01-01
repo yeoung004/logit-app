@@ -9,6 +9,10 @@ import { some } from "lodash-es";
 import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
+import "@/global.css";
+import "@/unistyles";
+import "react-native-reanimated";
+
 SplashScreen.preventAutoHideAsync();
 
 export const unstable_settings = {

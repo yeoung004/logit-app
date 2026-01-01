@@ -1,10 +1,7 @@
-import "@/global.css";
 import { useSplashLoading } from "@/hooks/useSplashLoading";
-import "@/unistyles";
 import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import React from "react";
-import "react-native-reanimated";
 
 export const LogitThemeProvider = ({
   children,
@@ -12,9 +9,16 @@ export const LogitThemeProvider = ({
   children: React.ReactNode;
 }) => {
   const [loaded, error] = useFonts({
-    PretendardVariable: require("@/assets/fonts/PretendardVariable.ttf"),
+    "Pretendard-Black": require("@/assets/fonts/Pretendard-Black.otf"),
+    "Pretendard-ExtraBold": require("@/assets/fonts/Pretendard-ExtraBold.otf"),
+    "Pretendard-Bold": require("@/assets/fonts/Pretendard-Bold.otf"),
+    "Pretendard-SemiBold": require("@/assets/fonts/Pretendard-SemiBold.otf"),
+    "Pretendard-Medium": require("@/assets/fonts/Pretendard-Medium.otf"),
+    "Pretendard-Regular": require("@/assets/fonts/Pretendard-Regular.otf"),
+    "Pretendard-Light": require("@/assets/fonts/Pretendard-Light.otf"),
+    "Pretendard-ExtraLight": require("@/assets/fonts/Pretendard-ExtraLight.otf"),
+    "Pretendard-Thin": require("@/assets/fonts/Pretendard-Thin.otf"),
   });
-
   const [, setLoading] = useSplashLoading("theme");
 
   React.useEffect(() => {
